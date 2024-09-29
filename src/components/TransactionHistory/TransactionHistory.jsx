@@ -11,21 +11,27 @@ export default function TransactionHistory({ items }) {
         </tr>
       </thead>
 
-      {items.map(item => {
-        function capitalizeFirstLetter(string) {
-          return string.charAt(0).toUpperCase() + string.slice(1);
-        }
+      <tbody>
+        {items.map(item => {
+          function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+          }
 
-        return (
-          <tbody key={item.id}>
-            <tr>
+          return (
+            <tr key={item.id}>
               <td>{capitalizeFirstLetter(item.type)}</td>
               <td>{item.amount}</td>
               <td>{item.currency}</td>
             </tr>
-          </tbody>
-        );
-      })}
+          );
+        })}
+
+        <tr>
+          <td>Withdrawal</td>
+          <td>85</td>
+          <td>USD</td>
+        </tr>
+      </tbody>
     </table>
   );
 }
