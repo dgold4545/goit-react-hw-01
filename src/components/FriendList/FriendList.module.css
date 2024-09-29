@@ -1,0 +1,14 @@
+.listBox {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 35px;
+}
+
+.itemBox {
+  min-width: 60px;
+  max-width: 110px;
+  width: 100%;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 10px;
+}

@@ -8,28 +8,28 @@ export default function Profile({
   stats: { followers, views, likes },
 }) {
   return (
-    <div>
-      <div>
+    <div className={styles.border}>
+      <div className={styles.flexContainer}>
         <img src={image} alt={name} />
-        <p>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+        <p className={styles.textTitle}>{name}</p>
+        <p className={styles.textModify}>@{tag}</p>
+        <p className={styles.textModify}>{location}</p>
       </div>
 
-      <ul>
-        <li>
+      <ul className={styles.profileList}>
+        <li className={styles.profileItems}>
           <span>Followers</span>
-          <span>{followers}</span>
+          <span className={styles.textBold}>{followers}</span>
         </li>
 
-        <li>
+        <li className={styles.profileItems}>
           <span>Views</span>
-          <span>{views}</span>
+          <span className={styles.textBold}>{views}</span>
         </li>
 
-        <li>
+        <li className={styles.profileItems}>
           <span>Likes</span>
-          <span>{likes}</span>
+          <span className={styles.textBold}>{likes}</span>
         </li>
       </ul>
     </div>
